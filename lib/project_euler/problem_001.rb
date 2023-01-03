@@ -1,14 +1,17 @@
+# frozen_string_literal: true
+
+# Problem 001
 module ProjectEuler
-  def self.Problem001(below, *multiples)
+  def self.problem001(below, *multiples)
     sum = 0
 
     below.times do |n|
       multiples.each do |multiple|
-        if n % multiple == 0
-          sum += n
+        next unless (n % multiple).zero?
 
-          break
-        end
+        sum += n
+
+        break
       end
     end
     sum
