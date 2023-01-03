@@ -5,6 +5,8 @@ require_relative 'project_euler/problem_002'
 
 # Project Euler helper functions
 module ProjectEuler
+  VERSION = 1.0
+
   def self.fibonacci
     seq = [1, 2]
 
