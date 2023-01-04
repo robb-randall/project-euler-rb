@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 # Problem 001
-module ProjectEuler
-  def self.problem001(below, *multiples)
+module Problems
+  def problem001(below, *multiples)
     sum = 0
 
     below.times do |n|

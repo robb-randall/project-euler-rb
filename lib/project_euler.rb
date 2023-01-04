@@ -1,18 +1,11 @@
 # frozen_string_literal: true
 
-require_relative 'project_euler/problem_001'
-require_relative 'project_euler/problem_002'
+Dir[File.join(__dir__, 'project_euler', '*.rb')].sort.each { |file| require file }
 
 # Project Euler helper functions
 module ProjectEuler
   VERSION = 1.0
 
-  def self.fibonacci
-    seq = [1, 2]
-
-    loop do
-      yield seq.first
-      seq = [seq.last, seq.first + seq.last]
-    end
-  end
+  extend Helpers
+  extend Problems
 end

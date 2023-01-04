@@ -3,22 +3,6 @@
 require 'project_euler'
 
 RSpec.describe ProjectEuler do
-  describe 'Helper Functions' do
-    describe '#fibonacci' do
-      expected = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-      actual = []
-
-      described_class.fibonacci do |n|
-        actual << n
-        break if actual.length == expected.length
-      end
-
-      it 'returns the fibonacci sequence up to 10 numbers' do
-        expect(actual).to eq(expected)
-      end
-    end
-  end
-
   describe 'Problems' do
     describe '#001' do
       it 'sums all multiple of 3 and 5 below 1000 equals 233,168' do
