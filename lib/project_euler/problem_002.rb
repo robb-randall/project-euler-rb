@@ -5,7 +5,7 @@ module Problems
   def problem002(below, *multiples)
     sum = 0
 
-    ProjectEuler.fibonacci do |n|
+    fibonacci do |n|
       break if n > below
 
       multiples.each do |multiple|
