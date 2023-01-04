@@ -12,16 +12,22 @@ module Helpers
   end
 
   def prime_factors(number)
+    return [1] if number == 1
+
     factors = []
     divisor = 2
 
-    if (number % divisor).zero?
-      factors << divisor
-      number /= divisor
-    else
-      divisor += 1
-    end while number > 1
+    while number > 1
+      if (number % divisor).zero?
+        factors << divisor
+        number /= divisor
+      else
+        divisor += 1
+      end
+    end
 
-    factors
+    factors << 1 if factors.length == 1
+
+    factors.sort
   end
 end
