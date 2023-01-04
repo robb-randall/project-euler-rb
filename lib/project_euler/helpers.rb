@@ -10,4 +10,18 @@ module Helpers
       seq = [seq.last, seq.first + seq.last]
     end
   end
+
+  def prime_factors(number)
+    factors = []
+    divisor = 2
+
+    if (number % divisor).zero?
+      factors << divisor
+      number /= divisor
+    else
+      divisor += 1
+    end while number > 1
+
+    factors
+  end
 end

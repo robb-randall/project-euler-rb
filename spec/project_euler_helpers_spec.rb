@@ -17,5 +17,11 @@ RSpec.describe ProjectEuler do
         expect(actual).to eq(expected)
       end
     end
+
+    describe '#prime_factors' do
+      it 'takes 13195 and returns [5, 7, 13, 29]' do
+        expect(described_class.prime_factors(13_195)).to eq([5, 7, 13, 29])
+      end
+    end
   end
 end
