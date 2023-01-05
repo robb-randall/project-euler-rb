@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 # Problem 002
-module ProjectEuler
-  def self.problem002(below, *multiples)
+module Problems
+  def problem002(below, *multiples)
     sum = 0
 
-    ProjectEuler.fibonacci do |n|
+    fibonacci do |n|
       break if n > below
 
       multiples.each do |multiple|

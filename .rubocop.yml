@@ -14,3 +14,10 @@ require:
 
 AllCops:
   NewCops: enable
+
+Metrics/MethodLength:
+  Enabled: true
+  Max: 15
+
+Style/ClassAndModuleChildren:
+  Enabled: false
