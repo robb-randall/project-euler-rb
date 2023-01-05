@@ -2,6 +2,13 @@
 
 # Project Euler Helper methods
 module Helpers
+  def divisible?(dividend, *divisors)
+    divisors.each do |divisor|
+      return false unless (dividend % divisor).zero?
+    end
+    true
+  end
+
   def fibonacci
     seq = [1, 2]
 

@@ -4,6 +4,24 @@ require 'project_euler'
 
 RSpec.describe ProjectEuler do
   describe 'Helpers' do
+    describe '#divisible?' do
+      it 'returns true when dividend is divided equally by divisor' do
+        expect(described_class.divisible?(100, 2)).to be true
+      end
+
+      it 'returns true when dividend is divided equally by all divisors' do
+        expect(described_class.divisible?(100, 5, 2)).to be true
+      end
+
+      it 'returns false when dividend is not equally divided by divisor' do
+        expect(described_class.divisible?(100, 99)).to be false
+      end
+
+      it 'returns false when dividend is not equally divided by any divisor' do
+        expect(described_class.divisible?(100, 2, 99)).to be false
+      end
+    end
+
     describe '#fibonacci' do
       expected = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
       actual = []
