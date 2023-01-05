@@ -8,7 +8,7 @@ module Problems
     divisors = (min_value..max_value).to_a
 
     while current_value += max_value
-      return current_value if divisible?(current_value, *divisors)
+      return current_value if Helpers.divisible?(current_value, *divisors)
     end
   end
 end

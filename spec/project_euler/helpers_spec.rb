@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'project_euler'
+require 'project_euler/helpers'
 
-RSpec.describe ProjectEuler do
+RSpec.describe Helpers do
   describe 'Helpers' do
     describe '#divisible?' do
       it 'returns true when dividend is divided equally by divisor' do

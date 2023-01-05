@@ -6,6 +6,6 @@ Dir[File.join(__dir__, 'project_euler', '*.rb')].sort.each { |file| require file
 module ProjectEuler
   VERSION = 1.0
 
-  extend Helpers
+  include Helpers
   extend Problems
 end

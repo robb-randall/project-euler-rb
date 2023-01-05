@@ -9,7 +9,7 @@ module Problems
       (n1 - 1).downto(min_value) do |n2|
         product = n1 * n2
 
-        is_largest_product = product > largest_product && palindrome?(product)
+        is_largest_product = product > largest_product && Helpers.palindrome?(product)
 
         largest_product = product if is_largest_product
       end

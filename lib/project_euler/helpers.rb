@@ -2,14 +2,14 @@
 
 # Project Euler Helper methods
 module Helpers
-  def divisible?(dividend, *divisors)
+  def self.divisible?(dividend, *divisors)
     divisors.each do |divisor|
       return false unless (dividend % divisor).zero?
     end
     true
   end
 
-  def fibonacci
+  def self.fibonacci
     seq = [1, 2]
 
     loop do
@@ -18,7 +18,7 @@ module Helpers
     end
   end
 
-  def palindrome?(obj)
+  def self.palindrome?(obj)
     obj = obj.to_s unless obj.is_a? String
 
     lower_index = 0
@@ -35,7 +35,7 @@ module Helpers
     true
   end
 
-  def prime_factors(number)
+  def self.prime_factors(number)
     return [1] if number == 1
 
     factors = []
