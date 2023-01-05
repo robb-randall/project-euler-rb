@@ -49,5 +49,15 @@ RSpec.describe ProjectEuler do
         expect(described_class.problem005(1, 20)).to eq(232_792_560)
       end
     end
+
+    describe '#problem006' do
+      it 'difference between the sum of the squares of the first 10 natural numbers and the square of the sum' do
+        expect(described_class.problem006(10)).to eq(2_640)
+      end
+
+      it 'difference between the sum of the squares of the first 100 natural numbers and the square of the sum' do
+        expect(described_class.problem006(100)).to eq(25_164_150)
+      end
+    end
   end
 end
