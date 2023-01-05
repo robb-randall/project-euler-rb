@@ -27,13 +27,12 @@ RSpec.describe ProjectEuler do
         expect(described_class.palindrome?(1)).to be true
       end
 
-
       it 'returns true for palindrome string of even length' do
         expect(described_class.palindrome?('abccba')).to be true
       end
 
       it 'returns true for palindrome integer of even length' do
-        expect(described_class.palindrome?(123321)).to be true
+        expect(described_class.palindrome?(123_321)).to be true
       end
 
       it 'returns true for palindrome string of odd length' do
@@ -41,20 +40,16 @@ RSpec.describe ProjectEuler do
       end
 
       it 'returns true for palindrome integer of odd length' do
-        expect(described_class.palindrome?(12321)).to be true
+        expect(described_class.palindrome?(12_321)).to be true
       end
-
 
       it 'returns false for non-palindrome string' do
         expect(described_class.palindrome?('abc')).to be false
-
       end
 
       it 'returns false for non-palindrome integer' do
         expect(described_class.palindrome?(123)).to be false
       end
-
-
     end
 
     describe '#prime_factors' do
