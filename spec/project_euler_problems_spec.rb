@@ -11,14 +11,20 @@ RSpec.describe ProjectEuler do
     end
 
     describe '#problem002' do
-      it 'sums all even number in the Fib sequence below 4 million' do
+      it 'returns the sums all even number in the Fib sequence below 4 million' do
         expect(described_class.problem002(4_000_000, 2)).to eq(4_613_732)
       end
     end
 
     describe '#problem003' do
-      it 'returns the largest prime factor of the number 600,851,475,143' do
+      it 'returns the largest prime factor for 600,851,475,143' do
         expect(described_class.problem003(600_851_475_143)).to eq(6_857)
+      end
+    end
+
+    describe '#problem004' do
+      it 'returns the largest palindrome made from the product of two 3-digit numbers' do
+        expect(described_class.problem004(100, 999)).to eq(906_609)
       end
     end
   end
