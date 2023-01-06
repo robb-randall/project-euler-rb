@@ -35,6 +35,13 @@ module Helpers
     true
   end
 
+  def self.prime?(number)
+    2.upto(number / 2) do |n|
+      return false if (number % n).zero?
+    end
+    true
+  end
+
   def self.prime_factors(number)
     return [1] if number == 1
 

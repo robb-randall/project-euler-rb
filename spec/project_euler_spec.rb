@@ -58,4 +58,14 @@ RSpec.describe ProjectEuler do
       expect(described_class.problem006(100)).to eq(25_164_150)
     end
   end
+
+  describe '#problem007' do
+    it 'lists the sixth prime number' do
+      expect(described_class.problem007(6)).to eq(13)
+    end
+
+    it 'lists the 10,001st prime number' do
+      expect(described_class.problem007(10_001)).to eq(104_743)
+    end
+  end
 end

@@ -70,6 +70,20 @@ RSpec.describe Helpers do
       end
     end
 
+    describe '#prime?' do
+      it 'takes a prime number and returns true' do
+        expect(described_class.prime?(7)).to be true
+      end
+
+      it 'takes a prime number (2) and returns true' do
+        expect(described_class.prime?(2)).to be true
+      end
+
+      it 'takes a non-prime number and returns false' do
+        expect(described_class.prime?(10)).to be false
+      end
+    end
+
     describe '#prime_factors' do
       it 'takes 1 and returns [1]' do
         expect(described_class.prime_factors(1)).to eq([1])
