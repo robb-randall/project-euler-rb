@@ -9,6 +9,5 @@ module Problems
       prime_count -= 1 if Helpers.prime? number
       return number if prime_count.zero?
     end
-
   end
 end
