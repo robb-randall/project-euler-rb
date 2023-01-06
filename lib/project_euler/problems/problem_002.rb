@@ -5,7 +5,7 @@ module Problems
   def problem002(below, *multiples)
     sum = 0
 
-    fibonacci do |n|
+    Helpers.fibonacci do |n|
       break if n > below
 
       multiples.each do |multiple|
